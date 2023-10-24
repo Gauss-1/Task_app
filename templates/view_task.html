@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Tarea</title>
+    <!-- Agrega tus enlaces a estilos CSS aquí si es necesario -->
+</head>
+<body>
+    <main class="container p-5">
+        <h1 class="display-4 text-center title mt-4">Detalles de la Tarea</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Detalle de la Tarea</h2>
+                        <p><strong>Contenido:</strong> {{ task.content }}</p>
+                        <p><strong>Estado:</strong> {% if task.done %}Hecha{% else %}Pendiente{% endif %}</p>
+                    </div>
+                </div>
+                <a href="{{ url_for('home') }}" class="btn btn-primary">Volver a la Lista de Tareas</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
